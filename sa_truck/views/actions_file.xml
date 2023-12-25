@@ -1,0 +1,73 @@
+<odoo>
+    <data>
+<!-- ******************** SA Truck Action ******************************* -->
+        <record id="sa_truck_action" model="ir.actions.act_window">
+            <field name="name">SA Truck</field>
+            <field name="res_model">sa.truck</field>
+            <field name="view_mode">kanban,tree,graph,calendar,form</field>
+        </record>
+
+        <record id="server_approve_action" model="ir.actions.server">
+            <field name="name">Approve</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="sa_truck.model_sa_truck"/>
+            <field name="binding_model_id" ref="sa_truck.model_sa_truck"/>
+            <field name="state">code</field>
+            <field name="code">
+            for rec in records:
+                rec.action_approve()</field>
+        </record>
+
+        <record id="sa_truck_action_server" model="ir.actions.server">
+            <field name="name">Create Invoice</field>
+            <field name="model_id" ref="model_sa_truck"/>
+            <field name="binding_model_id" ref="model_sa_truck"/>
+            <field name="state">code</field>
+            <field name="code">
+            for rec in records:
+                rec.create_invoice()</field>
+        </record>
+<!-- ******************** CheckList Action ********************************* -->
+        <record id="check_list_action" model="ir.actions.act_window">
+            <field name="name">CheckList</field>
+            <field name="res_model">check.list</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+<!-- ********************* States Action *************************************** -->
+        <record id="states_states_action" model="ir.actions.act_window">
+            <field name="name">States</field>
+            <field name="res_model">states.states</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+<!-- ********************* Frequency Action *************************************** -->
+        <record id="frequency_frequency_action" model="ir.actions.act_window">
+            <field name="name">Frequency</field>
+            <field name="res_model">frequency.frequency</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+<!-- ********************* Vehicle Action ****************************************** -->
+        <record id="vehicle_vehicle_action" model="ir.actions.act_window">
+            <field name="name">Vehicle</field>
+            <field name="res_model">vehicle.vehicle</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+<!-- ********************* City Action ************************************************* -->
+        <record id="city_city_action" model="ir.actions.act_window">
+            <field name="name">City</field>
+            <field name="res_model">city.city</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+<!-- ********************* Driver Information Action *************************************** -->
+        <record id="driver_info_action" model="ir.actions.act_window">
+            <field name="name">Driver Information</field>
+            <field name="res_model">driver.info</field>
+            <field name="view_mode"></field>
+        </record>
+
+        <record id="sale_action_demo" model="ir.actions.client">
+            <field name="name">Sale Custom</field>
+            <field name="tag">sa_truck.sale_action</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

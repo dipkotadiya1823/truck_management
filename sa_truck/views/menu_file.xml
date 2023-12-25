@@ -1,0 +1,87 @@
+<odoo>
+    <data>
+        <menuitem
+            id="sa_truck_menu"
+            name="SA Truck"
+            action="sa_truck.sa_truck_action"   
+            />
+
+        <menuitem
+            id="configuration_menu"
+            name="Configuration"
+            parent="sa_truck.sa_truck_menu"
+            action="sa_truck.sa_truck_action"
+            groups="sa_truck.group_sa_truck_manager"
+            sequence="2"/>
+
+        <menuitem
+            id="check_list_menu"
+            name="CheckList"
+            parent="sa_truck.configuration_menu"
+            action="sa_truck.check_list_action"
+            sequence="1"/>
+
+        <menuitem
+            id="states_menu"
+            name="States"
+            parent="sa_truck.configuration_menu"
+            action="sa_truck.states_states_action"
+            sequence="2"/>
+
+        <menuitem
+            id="frequency_menu"
+            name="Frequency"
+            parent="sa_truck.configuration_menu"
+            action="sa_truck.frequency_frequency_action"
+            sequence="3"/>
+
+        <menuitem
+            id="vehicle_menu"
+            name="Vehicle"
+            parent="sa_truck.configuration_menu"
+            action="sa_truck.vehicle_vehicle_action"
+            sequence="4"/>
+
+        <menuitem
+            id="city_menu"
+            name="City"
+            parent="sa_truck.configuration_menu"
+            action="sa_truck.city_city_action"
+            sequence="5"/>
+
+        <menuitem
+            id="repots_menu"
+            name="Repots"
+            parent="sa_truck.sa_truck_menu"
+            action="sa_truck.sa_truck_action"
+            sequence="3"/>
+
+        <menuitem
+            id="xlsx_rep_ortmenu"
+            name="Excel Report"
+            parent = "sa_truck.repots_menu"
+            action = "wizard_xlsx_action"
+            sequence="1"/>
+
+        <menuitem
+            id="pdf_report_menu"
+            name="PDF Report"
+            parent = "sa_truck.repots_menu"
+            action = "pdf_report_wizard_action"
+            sequence="2"/>
+
+        <menuitem
+            id="pdf_report_quary_wizard_action_menu"
+            name="PDF Quary Report"
+            parent="sa_truck.repots_menu"
+            action="pdf_report_quary_wizard_action"
+            sequence="3"/>
+
+        <menuitem 
+            id="menu_sale_demo"  
+            action="sale_action_demo"
+            name="Sale Custom"
+            parent="sale.sale_order_menu"
+            sequence="50"/>
+    </data>
+</odoo>

@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+        <record id="pdf_report_quary_wizard_view_form" model="ir.ui.view">
+            <field name="name">pdf.report.quary.wizard.view.form</field>
+            <field name="model">pdf.report.quary.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <!-- <field name="start_date" /> -->
+                                <!-- <field name="driver_id"/> -->
+                                <!-- <field name="manager_idd"/>  -->
+                                <!-- <field name="vehicle_idd"/> -->
+                                <field name="sa_truck_ids" widget="many2many_tags" />
+                            </group>
+                            <group>
+                            </group>
+                            <footer>
+                                <button name="confirm" type="object" string="Confirm" class ="oe_highlight"/>
+                                <button class ="oe_highlight" string="Cancel" special="cancel"/>
+                            </footer>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="pdf_report_quary_wizard_action" model="ir.actions.act_window">
+            <field name="name">PDF Report</field>
+            <field name="res_model">pdf.report.quary.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

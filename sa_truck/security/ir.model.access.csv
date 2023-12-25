@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sa_truck,access.sa.truck,sa_truck.model_sa_truck,,1,1,1,1
+access_check_list,access.check.list,sa_truck.model_check_list,,1,1,1,1
+access_states_states,access.states.states,sa_truck.model_states_states,,1,1,1,1
+access_frequency_frequency,access.frequency.frequency,sa_truck.model_frequency_frequency,,1,1,1,1
+access_vehicle_vehicle,access.vehicle.vehicle,sa_truck.model_vehicle_vehicle,,1,1,1,1
+access_city_city,access.city.city,sa_truck.model_city_city,,1,1,1,1
+access_driver_info,access.driver.info,sa_truck.model_driver_info,,1,1,1,1
+access_wizard_xlsx,access.wizard.xlsx,sa_truck.model_wizard_xlsx,,1,1,1,1
+access_pdf_report_wizard,access.pdf.report.wizard,sa_truck.model_pdf_report_wizard,,1,1,1,1
+access_pdf_report_quary_wizard,access.pdf.report.quary.wizard,sa_truck.model_pdf_report_quary_wizard,,1,1,1,1

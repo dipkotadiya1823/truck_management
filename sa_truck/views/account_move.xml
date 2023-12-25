@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="satruck_view_account_move_inherite_view" model="ir.ui.view">
+            <field name="name">satruck.view.account.move.inherite.view</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="sa_truck_id"/>
+                    <field name="company_name" readonly="1"/>
+                </field>      
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="action_sa_truck_xls_report" model="ir.actions.report">
+            <field name="name">Driver Excel Report</field>
+            <field name="model">sa.truck</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">sa_truck.satruck_xls_report</field>
+            <field name="report_file">sa_truck.satruck_xls_report</field>
+            <field name="print_report_name">'SaTruck - %s' % (object.driver_id.name)</field>
+            <field name="binding_model_id" ref="sa_truck.model_sa_truck"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>

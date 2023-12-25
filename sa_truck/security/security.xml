@@ -1,0 +1,43 @@
+<odoo>
+    <record id="sa_truck_category" model="ir.module.category">
+        <field name="name">SA Truck</field>
+    </record>
+
+    <record id="group_sa_truck_driver" model="res.groups">
+        <field name="name">Driver</field>
+        <field name="category_id" ref="sa_truck.sa_truck_category" />
+    </record>
+
+    <record id="group_sa_truck_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="sa_truck.sa_truck_category" />
+        <field name="implied_ids" eval="[(4,ref('sa_truck.group_sa_truck_driver'))]" />
+    </record>
+
+    <record id="group_sa_truck_admin" model="res.groups">
+        <field name="name">Admin</field>
+        <field name="category_id" ref="sa_truck.sa_truck_category" />
+        <field name="implied_ids" eval="[(4,ref('sa_truck.group_sa_truck_manager'))]" />
+    </record>
+
+    <record id="sa_truck_driver_record_rule" model="ir.rule">
+        <field name="name">Driver</field>
+        <field name="model_id" ref="sa_truck.model_sa_truck"/>
+        <field name="domain_force">['|',('driver_id','=',user.name),('driver_id','=',False)]</field>
+        <field name="groups" eval="[(4, ref('sa_truck.group_sa_truck_driver'))]"/>
+    </record>
+
+    <record id="sa_truck_manager_record_rule" model="ir.rule">
+        <field name="name">Manager</field>
+        <field name="model_id" ref="sa_truck.model_sa_truck"/>
+        <field name="domain_force">['|',('manager_idd','=',user.id),('manager_idd','=',False)]</field>
+        <field name="groups" eval="[(4, ref('sa_truck.group_sa_truck_manager'))]"/>
+    </record>
+
+    <record id="sa_truck_admin_record_list" model="ir.rule">
+        <field name="name">Admin</field>
+        <field name="model_id" ref="sa_truck.model_sa_truck"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups" eval="[(4, ref('sa_truck.group_sa_truck_admin'))]"/>
+    </record>
+</odoo>

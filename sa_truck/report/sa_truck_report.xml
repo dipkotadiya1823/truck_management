@@ -1,0 +1,136 @@
+<odoo>
+    <record id="action_sa_truck_report" model="ir.actions.report">
+        <field name="name">Driver Report</field>
+        <field name="model">sa.truck</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sa_truck.satruck_report</field>
+        <field name="report_file">tower_managment.satruck_report</field>
+        <field name="print_report_name">'SaTruck - %s' % (object.driver_id.name)</field>
+        <field name="binding_model_id" ref="sa_truck.model_sa_truck"/>
+        <field name="binding_type">report</field>
+        <field name="groups_id" eval="[(4, ref('sa_truck.group_sa_truck_manager'))]"/>
+    </record>
+
+    <template id="satruck_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.basic_layout">
+                    <div class="page">
+                        <div>
+                            <h1 class="text-center">Driver Expense Report</h1>
+                        </div>
+
+                        <div class="row" style="margin-top: 30px;">
+                            <div class="col-6">
+                                <h4>Order No.: <t t-esc="o.sequence"/></h4>
+                            </div>
+                            <div class="col-6">
+                                <h4>Trip Code: <t t-esc="o.name"/></h4>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top: 30px;">
+                            <div class='col-6'>
+                                <b>Driver Name</b> : <span t-field="o.driver_id"/><br/>
+                                <b>Manager</b> : <span t-field="o.manager_idd"/><br/>
+                                <b>Vehical Name</b> : <span t-field="o.vehicle_idd"/><br/>
+                                <b>States</b> : <span t-field="o.state"/><br/>
+                                <b>Company Name</b> : <span t-field="o.company_id"/><br/>
+                            </div>
+                            <div class='col-6'>
+                                <img t-if="o.driver_image" t-att-src="image_data_uri(o.driver_image)" class="float-end" alt="Logo" width="150" height="100"/>
+                            </div>
+                       </div> 
+
+                        <div style="margin-top: 30px; ">
+                            <table class="table" style="border: 5px solid black; ">
+                                <tbody>
+                                    <tr style="text-align: center; border: 5px solid black; background-color:#A9A9A9;">
+                                        <th colspan="2" style="border: 2px solid black;">Journey Detail</th>
+                                        <th>Departure Date Time </th>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;weight:50%; border: 2px solid black;">
+                                            From : <span t-field="o.from_city_id"/>  
+                                        </td>
+                                        <td style="text-align: center;weight:50%; border: 2px solid black;">
+                                            To : <span t-field="o.to_city_id"/>
+                                        </td> 
+                                        <td style="text-align: center;weight:50%; border: 2px solid black;">
+                                            <t t-esc="o.create_datetime"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>                            
+                        </div>
+
+                        <table class="table" style="margin-top: 25px;border: 5px solid black;">
+                            <tbody>
+                                <tr style="background-color:#A9A9A9; text-align: center; border: 5px solid black;">
+                                    <th style="border: 2px solid black;">CheckList</th>
+                                    <th style="border: 2px solid black;">Frequency</th>
+                                    <th style="border: 2px solid black;">Addisnal Amount</th>
+                                    <th style="border: 2px solid black;">Unit price</th>
+                                    <th style="border: 2px solid black;">Quantity</th>
+                                    <th style="border: 2px solid black;">Sub Total</th>
+                                    <th style="border: 2px solid black;">Total Amount(With Addisnal Amount)</th>
+                                </tr>
+                                <t t-foreach="o.driverinfo_ids" t-as="doc">
+                                    <tr>
+                                        <td style="text-align: center;weight:50%; border: 2px solid black;">
+                                            <span t-field="doc.checklist_id"/>
+                                        </td>
+                                        <td style="text-align: center;weight:50%; border: 2px solid black;">
+                                            <span t-field="doc.frequency_id"/>
+                                        </td>
+                                        <td style="text-align: center;weight:50%; border: 2px solid black;">
+                                            <!-- <t t-esc="(doc.additional_amount) * 100" t-options='{"widget": "float", "precision": 2}'/>% -->
+                                            <span t-field="doc.additional_amount_ids"/>
+                                        </td>
+                                        <td style="text-align: center;weight:50%; border: 2px solid black;">
+                                            <t t-esc="doc.unit_price"/>
+                                        </td>
+                                        <td style="text-align: center;weight:50%; border: 2px solid black;">
+                                            <t t-esc="doc.quantity"/>
+                                        </td>
+                                        <td style="text-align: center;weight:50%; border: 2px solid black;">
+                                            <t t-esc="doc.subtotal"/>
+                                        </td>
+                                        <td style="text-align: center;weight:50%; border: 2px solid black;">
+                                            <t t-esc="doc.total_amount"/>
+                                        </td>
+                                    </tr> 
+                                </t>
+                            </tbody>
+                        </table>
+
+                        <div style="float:right; width:50%; text:right;margin-top: 15px;">
+                            <table style="float:right;">                               
+                                <tr>
+                                    <td><b>Sub Amount</b> :</td>
+                                    <td><b><span t-field="o.total"/></b></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Additional Amount</b> :</td>
+                                    <td><b><span t-field="o.sa_addisnal_amount"/></b></td>
+                                </tr>
+                                <tr>
+                                    <td><hr/></td>
+                                    <td><hr/></td>
+                                </tr>                                
+                                <tr>
+                                    <td><b>Total</b> :</td>
+                                    <td><b><span t-field="o.total_with_addisnal_amount"/></b></td>                                  
+                                </tr>
+                                <!-- <tr>                                    
+                                    <td style = "font-weight: bold; padding-top: 10px; padding-bottom: 10px; color:#FEFEFE;">Signature</td>
+                                    <td style = "font-weight: bold;">Signature:<img style="width: 150px; height: 150px; padding-top: 10px; padding-bottom: 10px; padding-right:10px;" t-if="o.signature" t-att-src="image_data_uri(o.signature)" class="float-end" alt="Logo"/></td>
+                                </tr> -->                               
+                            </table>
+                        </div>  
+                    </div>
+                </t>    
+            </t>
+        </t>
+    </template>
+</odoo>

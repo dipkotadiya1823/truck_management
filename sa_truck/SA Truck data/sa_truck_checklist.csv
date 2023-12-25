@@ -1,0 +1,5 @@
+id,name,unit_price
+checklist_breckfast,BreckFast,200
+checklist_lunch,Lunch,300
+checklist_dinner,Dinner,300
+checklist_otherExpenses,Other Expenses,200

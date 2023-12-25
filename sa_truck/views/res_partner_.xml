@@ -1,0 +1,16 @@
+<odoo>
+    <record id="satruck_view_res_partner_inherite_view" model="ir.ui.view">
+        <field name="name">satruck.view.res.partner.inherite.view</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <!-- <field name="domain" >['company_type','=','person']</field> -->
+        <field name="arch" type="xml">
+            <field name="vat" position="after">
+                <field name="active_driver"/>
+            </field>      
+            <field name="active_driver" position="attributes">
+                <attribute name="attrs">{'invisible': [('company_type', '=', 'company')]}</attribute>
+            </field>
+        </field>
+    </record>
+</odoo>

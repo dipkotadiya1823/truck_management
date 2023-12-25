@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="pdf_report_wizard_view_form" model="ir.ui.view">
+            <field name="name">pdf.report.wizard.view.form</field>
+            <field name="model">pdf.report.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="start_date" />
+                            </group>
+                            <group>
+                                <field name="end_date"/>
+                            </group>
+                            <footer>
+                                <button name="confirm" type="object" string="Confirm" class ="oe_highlight"/>
+                                <button class ="oe_highlight" string="Cancel" special="cancel"/>
+                            </footer>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="pdf_report_wizard_action" model="ir.actions.act_window">
+            <field name="name">PDF Report</field>
+            <field name="res_model">pdf.report.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

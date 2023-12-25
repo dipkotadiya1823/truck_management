@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!-- *************************CheckList View ******************************************************* -->
+        <record id="check_list_view_tree" model="ir.ui.view">
+            <field name="name">check.list.view.tree</field>
+            <field name="model">check.list</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="unit_price" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="check_list_view_form" model="ir.ui.view">
+            <field name="name">check.list.view.form</field>
+            <field name="model">check.list</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="unit_price" required="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="check_list_view_search" model="ir.ui.view">
+            <field name="name">check.list.view.search</field>
+            <field name="model">check.list</field>
+            <field name="arch" type="xml">
+                <search string="">
+                    <field name="name" string="CheckList" />
+                    <group expand="0" string="Group By">
+                        <filter string="CheckList Name" name="group_by_name" domain="[]"
+                            context="{'group_by': 'name'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+<!-- ********************** States View **************************************************************** -->
+        <record id="states_states_view_tree" model="ir.ui.view">
+            <field name="name">states.states.view.tree</field>
+            <field name="model">states.states</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="states_states_view_form" model="ir.ui.view">
+            <field name="name">states.states.view.form</field>
+            <field name="model">states.states</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                            </group>                    
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="states_states_view_search" model="ir.ui.view">
+            <field name="name">states.states.view.search</field>
+            <field name="model">states.states</field>
+            <field name="arch" type="xml">
+                <search string="">
+                    <field name="name" string="States" />
+                    <group expand="0" string="Group By">
+                        <filter string="States" name="group_by_name" domain="[]"
+                            context="{'group_by': 'name'}"/>
+                    </group>    
+                </search>
+            </field>
+        </record>
+        
+<!-- *********************** Frequency View ************************************************************** -->
+        <record id="frequency_frequency_view_tree" model="ir.ui.view">
+            <field name="name">frequency.frequency.view.tree</field>
+            <field name="model">frequency.frequency</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="frequency_frequency_view_form" model="ir.ui.view">
+            <field name="name">frequency.frequency.view.form</field>
+            <field name="model">frequency.frequency</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                            </group>                     
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="frequency_frequency_view_search" model="ir.ui.view">
+            <field name="name">frequency.frequency.view.search</field>
+            <field name="model">frequency.frequency</field>
+            <field name="arch" type="xml">
+                <search string="">
+                    <field name="name" string="Frequency" />
+                    <group expand="0" string="Group By">
+                        <filter string="Frequency" name="group_by_name" domain="[]"
+                            context="{'group_by': 'name'}"/>
+                    </group>    
+                </search>
+            </field>
+        </record>
+<!-- ********************** Vehical View ***************************************************************** -->
+        <record id="vehicle_vehicle_view_tree" model="ir.ui.view">
+            <field name="name">vehicle.vehicle.view.tree</field>
+            <field name="model">vehicle.vehicle</field>
+            <field name="arch" type="xml">
+                <tree >
+                    <field name="vehicle_model_id" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="vehicle_vehicle_view_form" model="ir.ui.view">
+            <field name="name">vehicle.vehicle.view.form</field>
+            <field name="model">vehicle.vehicle</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" />
+                                <field name="vehicle_model_id" required="1"/>
+                            </group>                          
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="vehicle_vehicle_view_search" model="ir.ui.view">
+            <field name="name">vehicle.vehicle.view.search</field>
+            <field name="model">vehicle.vehicle</field>
+            <field name="arch" type="xml">
+                <search string="">
+                    <field name="vehicle_model_id" string="vehicle" />
+                    <group expand="0" string="Group By">
+                        <filter string="Vehicle Model" name="group_by_vehicle_id" domain="[]"
+                            context="{'group_by': 'vehicle_model_id'}"/>
+                    </group>    
+                </search>
+            </field>
+        </record>
+<!-- ******************** City View ************************************************************************** -->  
+        <record id="city_city_view_tree" model="ir.ui.view">
+            <field name="name">city.city.view.tree</field>
+            <field name="model">city.city</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="city_city_view_form" model="ir.ui.view">
+            <field name="name">city.city.view.form</field>
+            <field name="model">city.city</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="frequency_frequency_view_search" model="ir.ui.view">
+            <field name="name">frequency.frequency.view.search</field>
+            <field name="model">city.city</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" string="City" />
+                    <group expand="0" string="Group By">
+                        <filter string="City" name="group_by_name" domain="[]"
+                            context="{'group_by': 'name'}"/>
+                    </group>    
+                </search>
+            </field>
+        </record>
+        
+    </data>
+</odoo>
+
+
+ 

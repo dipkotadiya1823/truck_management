@@ -1,0 +1,669 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sa_truck
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-29 10:34+0000\n"
+"PO-Revision-Date: 2023-06-29 10:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sa_truck
+#: model:ir.actions.report,print_report_name:sa_truck.action_sa_truck_report
+msgid "'SaTruck - %s' % (object.driver_id.name)"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid "<b>Additional Amount</b> :"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_kanban
+msgid "<b>Date :</b>"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid "<b>Driver Name</b> :"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_kanban
+msgid "<b>Manager :</b>"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_kanban
+msgid "<b>State :</b>"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid "<b>Sub Amount</b> :"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid "<b>Total</b> :"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_kanban
+msgid "<b>Vehical :</b>"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_kanban
+msgid "<b>journey :</b>"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid ""
+"<br/>\n"
+"                                <b>Company Name</b> :"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid ""
+"<br/>\n"
+"                                <b>Manager</b> :"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid ""
+"<br/>\n"
+"                                <b>States</b> :"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid ""
+"<br/>\n"
+"                                <b>Vehical Name</b> :"
+msgstr ""
+
+#. module: sa_truck
+#: model:mail.template,body_html:sa_truck.sa_truck_email_template
+msgid ""
+"<p>\n"
+"                <t t-out=\"object.driver_id.name\"></t>'s <br> Trip Expense Report                \n"
+"            </p> \n"
+"        "
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_res_partner__active_driver
+#: model:ir.model.fields,field_description:sa_truck.field_res_users__active_driver
+msgid "Active Driver"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid "Addisnal Amount"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_driver_info__addisnal_amount
+msgid "Addisnal Amount(%)"
+msgstr "વધારાની રકમ"
+
+#. module: sa_truck
+#: model:res.groups,name:sa_truck.group_sa_truck_admin
+msgid "Admin"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields.selection,name:sa_truck.selection__sa_truck__state__approve
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_form
+msgid "Approve"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.actions.act_window,name:sa_truck.check_list_action
+#: model:ir.model,name:sa_truck.model_check_list
+#: model:ir.model.fields,field_description:sa_truck.field_driver_info__checklist_id
+#: model:ir.ui.menu,name:sa_truck.check_list_menu
+#: model_terms:ir.ui.view,arch_db:sa_truck.check_list_view_search
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid "CheckList"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.check_list_view_search
+msgid "CheckList Name"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.actions.act_window,name:sa_truck.city_city_action
+#: model:ir.model,name:sa_truck.model_city_city
+#: model:ir.model.fields,field_description:sa_truck.field_city_city__name
+#: model:ir.model.fields,field_description:sa_truck.field_driver_info__City
+#: model:ir.ui.menu,name:sa_truck.city_menu
+#: model_terms:ir.ui.view,arch_db:sa_truck.frequency_frequency_view_search
+msgid "City"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__code
+msgid "Code"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__Company_name_id
+msgid "Company Name"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.ui.menu,name:sa_truck.configuration_menu
+msgid "Configuration"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model,name:sa_truck.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_check_list__create_uid
+#: model:ir.model.fields,field_description:sa_truck.field_city_city__create_uid
+#: model:ir.model.fields,field_description:sa_truck.field_driver_info__create_uid
+#: model:ir.model.fields,field_description:sa_truck.field_frequency_frequency__create_uid
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__create_uid
+#: model:ir.model.fields,field_description:sa_truck.field_states_states__create_uid
+#: model:ir.model.fields,field_description:sa_truck.field_vehicle_vehicle__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_check_list__create_date
+#: model:ir.model.fields,field_description:sa_truck.field_city_city__create_date
+#: model:ir.model.fields,field_description:sa_truck.field_driver_info__create_date
+#: model:ir.model.fields,field_description:sa_truck.field_frequency_frequency__create_date
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__create_date
+#: model:ir.model.fields,field_description:sa_truck.field_states_states__create_date
+#: model:ir.model.fields,field_description:sa_truck.field_vehicle_vehicle__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__create_datetime
+msgid "Current Date Time"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_search
+msgid "Date"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_kanban
+msgid "Delete"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid "Departure Date Time"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_check_list__display_name
+#: model:ir.model.fields,field_description:sa_truck.field_city_city__display_name
+#: model:ir.model.fields,field_description:sa_truck.field_driver_info__display_name
+#: model:ir.model.fields,field_description:sa_truck.field_frequency_frequency__display_name
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__display_name
+#: model:ir.model.fields,field_description:sa_truck.field_states_states__display_name
+#: model:ir.model.fields,field_description:sa_truck.field_vehicle_vehicle__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields.selection,name:sa_truck.selection__sa_truck__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: sa_truck
+#: model:res.groups,name:sa_truck.group_sa_truck_driver
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_search
+msgid "Driver"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_form
+msgid "Driver Expense"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid "Driver Expense Report"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__driver_image
+msgid "Driver Image"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.actions.act_window,name:sa_truck.driver_info_action
+#: model:ir.model,name:sa_truck.model_driver_info
+msgid "Driver Information"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__driverinfo_ids
+msgid "Driver Informaton"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__driver_id
+msgid "Driver Name"
+msgstr "ડ્રાઇવરનું નામ"
+
+#. module: sa_truck
+#: model:ir.actions.report,name:sa_truck.action_sa_truck_report
+msgid "Driver Report"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_kanban
+msgid "Dropdown menu"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_kanban
+msgid "Edit"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__email
+msgid "Email"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.actions.act_window,name:sa_truck.frequency_frequency_action
+#: model:ir.model.fields,field_description:sa_truck.field_driver_info__frequency_id
+#: model:ir.ui.menu,name:sa_truck.frequency_menu
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid "Frequency"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid "From :"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__from_city_id
+msgid "From City"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.check_list_view_search
+#: model_terms:ir.ui.view,arch_db:sa_truck.frequency_frequency_view_search
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_search
+#: model_terms:ir.ui.view,arch_db:sa_truck.states_states_view_search
+#: model_terms:ir.ui.view,arch_db:sa_truck.vehicle_vehicle_view_search
+msgid "Group By"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_check_list__id
+#: model:ir.model.fields,field_description:sa_truck.field_city_city__id
+#: model:ir.model.fields,field_description:sa_truck.field_driver_info__id
+#: model:ir.model.fields,field_description:sa_truck.field_frequency_frequency__id
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__id
+#: model:ir.model.fields,field_description:sa_truck.field_states_states__id
+#: model:ir.model.fields,field_description:sa_truck.field_vehicle_vehicle__id
+msgid "ID"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,help:sa_truck.field_sa_truck__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,help:sa_truck.field_sa_truck__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_kanban
+msgid "Image Error"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid "Journey Detail"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__km
+msgid "KM"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_check_list____last_update
+#: model:ir.model.fields,field_description:sa_truck.field_city_city____last_update
+#: model:ir.model.fields,field_description:sa_truck.field_driver_info____last_update
+#: model:ir.model.fields,field_description:sa_truck.field_frequency_frequency____last_update
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck____last_update
+#: model:ir.model.fields,field_description:sa_truck.field_states_states____last_update
+#: model:ir.model.fields,field_description:sa_truck.field_vehicle_vehicle____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_check_list__write_uid
+#: model:ir.model.fields,field_description:sa_truck.field_city_city__write_uid
+#: model:ir.model.fields,field_description:sa_truck.field_driver_info__write_uid
+#: model:ir.model.fields,field_description:sa_truck.field_frequency_frequency__write_uid
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__write_uid
+#: model:ir.model.fields,field_description:sa_truck.field_states_states__write_uid
+#: model:ir.model.fields,field_description:sa_truck.field_vehicle_vehicle__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_check_list__write_date
+#: model:ir.model.fields,field_description:sa_truck.field_city_city__write_date
+#: model:ir.model.fields,field_description:sa_truck.field_driver_info__write_date
+#: model:ir.model.fields,field_description:sa_truck.field_frequency_frequency__write_date
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__write_date
+#: model:ir.model.fields,field_description:sa_truck.field_states_states__write_date
+#: model:ir.model.fields,field_description:sa_truck.field_vehicle_vehicle__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid "Logo"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__manager_idd
+#: model:res.groups,name:sa_truck.group_sa_truck_manager
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_search
+msgid "Manager"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_check_list__name
+msgid "Name"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,help:sa_truck.field_sa_truck__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,help:sa_truck.field_sa_truck__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid "Order No.:"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_form
+msgid "Other Details"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_driver_info__quantity
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid "Quantity"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_driver_info__remark
+msgid "Remark"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_form
+msgid "Reset to Draft"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.actions.act_window,name:sa_truck.sa_truck_action
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__satruck_id
+#: model:ir.module.category,name:sa_truck.sa_truck_category
+#: model:ir.ui.menu,name:sa_truck.sa_truck_menu
+msgid "SA Truck"
+msgstr ""
+
+#. module: sa_truck
+#: model:mail.template,subject:sa_truck.sa_truck_email_template
+msgid "SATruck Email"
+msgstr ""
+
+#. module: sa_truck
+#: model:mail.template,name:sa_truck.sa_truck_email_template
+msgid "SATruck Email Template"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__sa_addisnal_amount
+msgid "Sa Addisnal Amount"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model,name:sa_truck.model_sa_truck
+msgid "Sa Truck"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_driver_info__satruck_id
+msgid "Sa truck"
+msgstr ""
+
+#. module: sa_truck
+#: model:mail.template,description:sa_truck.sa_truck_email_template
+msgid "Sent to the Driver to mail"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__state
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_search
+msgid "State"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.actions.act_window,name:sa_truck.states_states_action
+#: model:ir.model,name:sa_truck.model_states_states
+#: model:ir.model.fields,field_description:sa_truck.field_driver_info__states_id
+#: model:ir.ui.menu,name:sa_truck.states_menu
+#: model_terms:ir.ui.view,arch_db:sa_truck.states_states_view_search
+msgid "States"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_driver_info__subtotal
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid "Sub Total"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_kanban
+msgid "To"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid "To :"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields.selection,name:sa_truck.selection__sa_truck__state__to_approve
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_form
+msgid "To Approve"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__to_city_id
+msgid "To City"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__total
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_form
+msgid "Total"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_driver_info__total_amount
+msgid "Total Amount (With Addisnal Amount)"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid "Total Amount(With Addisnal Amount)"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__total_with_addisnal_amount
+msgid "Total With Addisnal Amount"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__name
+msgid "Trip Code"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid "Trip Code:"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_driver_info__unit_price
+msgid "Unit Price"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_check_list__unit_price
+#: model_terms:ir.ui.view,arch_db:sa_truck.satruck_report
+msgid "Unit price"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.actions.act_window,name:sa_truck.vehicle_vehicle_action
+#: model:ir.model,name:sa_truck.model_vehicle_vehicle
+#: model:ir.model.fields,field_description:sa_truck.field_driver_info__vehicle_id
+#: model:ir.ui.menu,name:sa_truck.vehicle_menu
+#: model_terms:ir.ui.view,arch_db:sa_truck.sa_truck_view_search
+msgid "Vehicle"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__vehicle_idd
+#: model:ir.model.fields,field_description:sa_truck.field_vehicle_vehicle__vehicle_model_id
+#: model_terms:ir.ui.view,arch_db:sa_truck.vehicle_vehicle_view_search
+msgid "Vehicle Model"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_sa_truck__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,help:sa_truck.field_sa_truck__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model,name:sa_truck.model_frequency_frequency
+msgid "frequency"
+msgstr ""
+
+#. module: sa_truck
+#: model:ir.model.fields,field_description:sa_truck.field_frequency_frequency__name
+#: model:ir.model.fields,field_description:sa_truck.field_states_states__name
+#: model:ir.model.fields,field_description:sa_truck.field_vehicle_vehicle__name
+msgid "name"
+msgstr ""
+
+#. module: sa_truck
+#: model_terms:ir.ui.view,arch_db:sa_truck.vehicle_vehicle_view_search
+msgid "vehicle"
+msgstr ""
+
+#. module: sa_truck
+#: model:mail.template,report_name:sa_truck.sa_truck_email_template
+msgid "{{object.driver_id.name}} Expense Report"
+msgstr ""

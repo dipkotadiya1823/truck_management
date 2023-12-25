@@ -1,0 +1,130 @@
+<odoo>
+    <record id="menu_sa_truck" model="website.menu">
+        <field name="name">Create Driver Trip</field>
+        <field name="url">/sa_truck/</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence">10</field>
+    </record>
+     <record id="menu_sa_truck" model="website.menu">
+        <field name="name"> Driver Trip</field>
+        <field name="url">?sa_truk_menu</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence">10</field>
+    </record>
+    <template id="sa_truck_model_controller" name="Driver">
+        <t t-call="website.layout">
+            <div class="container">
+                <div class="oe_structure">      
+                    <table class="table" style="border: 5px solid black; ">
+                        <tbody>
+                            <tr style="text-align: center; border: 5px solid black; background-color:#A9A9A9;">
+                                <th>Driver</th>
+                            </tr>
+                            <t t-foreach="driver" t-as="dri">
+                                <tr>
+                                    <td style="text-align: center;weight:50%; border: 2px solid black;">
+                                        <span t-field="dri.driver_id"/> 
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>  
+                    <!-- <t t-foreach="email" t-as="ema">
+                        <t t-esc="ema.email"/>
+                    </t> -->
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="sa_truck_model_email_controller" name="Email">
+        <t t-call="website.layout">
+            <div class="container">
+                <div class="oe_structure">      
+                    <table class="table" style="border: 5px solid black; ">
+                        <tbody>
+                            <tr style="text-align: center; border: 5px solid black; background-color:#A9A9A9;">
+                                <th>Email</th>
+                            </tr>
+                            <t t-foreach="email" t-as="ema">
+                                <tr>
+                                    <td style="text-align: center;weight:50%; border: 2px solid black;">
+                                        <span t-field="ema.email"/> 
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>  
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="sa_truck_driver_tripform" name="Driver Trip Form">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <div class="container">
+                        <form role="form" action="/create/sa_truck_thanks" method="POST">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                            <div class="from-group">
+                                <label for="driver_id" class="control-label">Your Name</label>
+                                <input id="driver_name" type="text" list="driver_id"/>
+                                <datalist id ="contact_list">
+                                    <t t-foreach="driver_id" t-as="driver" name="driver_name">
+                                        <option t-att-value="driver.name" name="driver.name" t-esc="driver.name"/>
+                                    </t>
+                                </datalist>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="control-lebel">Your Email</label>
+                                <input type="email" name="email" t-att-value="email" id="email"
+                                    class="form-control" /> 
+                            </div>
+                            <!-- <div class="form-group">
+                                <label for="from_city_id" class="control-lebel">From City</label>
+                                <input id="from_city" type="text" list="from_city_id"/>
+                                <datalist id ="contact_list">
+                                    <t t-foreach="from_city_id" t-as="from_city" name="from_city">
+                                        <option t-att-value="from_city.name" name="from_city" t-esc="from_city.name"/>
+                                    </t>
+                                </datalist>
+                            </div>
+                            <div class="form-group">
+                                <label for="to_city_id" class="control-lebel">To City</label>
+                                <input id="to_city_name" type="text" list="to_city_id"/>
+                                <datalist id ="contact_list">
+                                    <t t-foreach="to_city_id" t-as="to_city" name="to_city_name">
+                                        <option t-att-value="to_city.name" name="to_city.name" t-esc="to_city.name"/>
+                                    </t>
+                                </datalist>
+                            </div> -->
+                            <div class="clearfix on_login_button">
+                                <button type="submit" class="btn btn-primary pull-left">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <record id="sa_truck_creted_driver_trip_record" model="website.page">
+        <field name="name">Thank You</field>
+        <field name="type">qweb</field>
+        <field name="url">/create/sa_truck_thanks</field>
+        <field name="website_published">True</field>
+        <field name="key">sa_truck.sa_truck_creted_driver_trip_record</field>
+        <field name="arch" type="xml">
+            <t name="Thanks" t-name="sa_truck_sa_truck_creted_driver_trip_record">
+                <t t-call="website.layout">
+                    <div id="wrap">
+                        <div class="container">
+                            <h1>Thank You</h1>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+</odoo>
